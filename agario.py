@@ -37,16 +37,50 @@ for i in range NUMBER_OF_BALLS:
 	BALLS.Append(ball_1)
 
 def move_all_balls():
-	for ball_1 in BALLS():
+	for ball_1 in BALLS:
 		ball_1.move(SCREEN_HEIGHT,SCREEN_WIDTH)
 
 def collide(ball_a,ball_b):
-	if ball_a=ball_b:
+	if ball_1=ball_2:
 		return False
-	if ball_a.radius+ball_b.radius+10 > math.sqrt(math.pow(ball_a.xcor()-ball_b.xcor()),2)+math.pow((ball_a.ycor()-ball_b.ycor()),2)):
-	return true 
+	if ball_1.radius+ball_2.radius > math.sqrt(math.pow(ball_2.xcor()-ball_1.xcor()),2)+math.pow((ball_2.ycor()-ball_1.ycor()),2)):
+	return True 
+	else return False
 
-	
+def check_all_balls_collision():
+	for ball_1 in BALLS:
+		for ball_2 in BALLS:
+			if collide(ball_1,ball_2):
+				ball_1_radius = ball_1.radius
+				ball_2_radius = ball_2.radius
+				new_ball_x=random.randint(int(-SCREEN_WIDTH + MAXIMUM_BALL_RADIUS),int(SCREEN_WIDTH - MAXIMUM_BALL_RADIUS))
+				new_ball_y=random.randint(int(-SCREEN_HEIGHT + MAXIMUM_BALL_RADIUS),int(SCREEN_HEIGHT - MAXIMUM_BALL_RADIUS))
+				new_ball_dx =random.randint(int(MINIMUM_BALL_DX),int(MAXIMUM_BALL_DX))
+				new_ball_dy =random.randint(int(MINIMUM_BALL_DY),int(MAXIMUM_BALL_DY))
+				new_ball_radius = random.randint(int(MINIMUM_BALL_RADIUS),int(MAXIMUM_BALL_RADIUS))
+				new_r = random.randint(0,255)
+				new_g = random.randint(0,255)
+				new_b = random.randint(0,255)
+				new_color = (new_r,new_g,new_b)
+
+				while (new_ball_dx==0):
+					new_ball_dx =random.randint(int(MINIMUM_BALL_DX),int(MAXIMUM_BALL_DX))
+				while (new_ball_dy==0):
+						new_ball_dy =random.randint(int(MINIMUM_BALL_DY),int(MAXIMUM_BALL_DY))
+
+				if(ball_1_radius>ball_2_radius):
+					ball_2.
+
+
+
+
+
+
+
+
+
+
+
 math.sqrt(math.pow((x2-x1),2) + math.pow((y2-y1),2))
 
 
